@@ -13,11 +13,11 @@ const AddCandy = (props) => {
       candyName: inputName.current.value,
       candyDescription: inputDescription.current.value,
       candyPrice: inputPrice.current.value,
-      amount:1
+      id: Math.random(),
     };
 
     // console.log(candyData);
-    props.onAdd(candyData)
+    props.onAdd(candyData);
   };
 
   return (

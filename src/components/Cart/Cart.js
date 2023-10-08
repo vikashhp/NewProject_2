@@ -4,7 +4,7 @@ import { useContext } from "react";
 
 import CartConext from "../store/cartContext";
 
-const Cart = () => {
+const Cart = (props) => {
  const cartCtx=useContext(CartConext);
  const cartItemsNumber=cartCtx.items.length;
   return (

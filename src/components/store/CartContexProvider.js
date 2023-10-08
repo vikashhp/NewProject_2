@@ -2,7 +2,7 @@ import CartConext from "./cartContext";
 
 const CartContextProvider = (props) => {
   const cart = {
-    items: [],
+    items:props.add,
   };
 
   return (

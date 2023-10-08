@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <CartContextProvider>
+    <CartContextProvider add={candy}>
        <Cart/>
       <AddCandy onAdd={candyDataHandler}/>
       <Candy items={candy} />

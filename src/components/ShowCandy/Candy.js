@@ -8,11 +8,10 @@ const Candy = (props) => {
           candyName={item.candyName}
           candyDescription={item.candyDescription}
           candyPrice={item.candyPrice}
+          key={item.id}
+          totalItems={props.items.length}
         />
-        
       ))}
-
-
     </div>
   );
 };
