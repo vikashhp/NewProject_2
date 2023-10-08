@@ -3,6 +3,8 @@ import CartConext from "./cartContext";
 const CartContextProvider = (props) => {
   const cart = {
     items:props.add,
+    addItem:()=>{},
+    amount:0
   };
 
   return (

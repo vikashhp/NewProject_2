@@ -5,12 +5,17 @@ import { useContext } from "react";
 
 const ShowCandy = (props) => {
   const cartCtx = useContext(CartConext);
+
   const oneHandler = () => {
-    cartCtx.items.push([]);
-    // console.log(cartCtx.items.length)
+   
   };
-  const twoHandler = () => {};
-  const threeHandler = () => {};
+  const twoHandler = () => {
+
+  };
+  const threeHandler = () => {
+  
+   
+  };
   return (
     <div>
       <li className={classes.candy}>
