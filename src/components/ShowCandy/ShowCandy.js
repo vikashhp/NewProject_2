@@ -2,17 +2,41 @@ import classes from "./ShowCandy.module.css";
 import Button from "../Button/Button";
 import CartConext from "../store/cartContext";
 import { useContext } from "react";
+import { useState } from "react";
 
 const ShowCandy = (props) => {
   const cartCtx = useContext(CartConext);
 
+  // console.log(amount)
+ 
+
   const oneHandler = () => {
-   
+    cartCtx.addItem({
+      id: Math.random(),
+      candyName: props.candyName,
+  
+      candyPrice: props.candyPrice,
+    })
+  //  console.log(state)
   };
   const twoHandler = () => {
 
+    cartCtx.addItem({
+      id: Math.random(),
+      candyName: props.candyName,
+  
+      candyPrice: props.candyPrice,
+    })
+
   };
   const threeHandler = () => {
+
+    cartCtx.addItem({
+      id: Math.random(),
+      candyName: props.candyName,
+  
+      candyPrice: props.candyPrice,
+    })
   
    
   };

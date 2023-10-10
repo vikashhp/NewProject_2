@@ -1,7 +1,10 @@
 import { useRef } from "react";
 import Button from "../Button/Button";
+import { useContext } from "react";
+import CartConext from "../store/cartContext";
 
 const AddCandy = (props) => {
+  const cartCtx = useContext(CartConext);
   const inputName = useRef();
   const inputDescription = useRef();
   const inputPrice = useRef();
@@ -15,9 +18,14 @@ const AddCandy = (props) => {
       candyPrice: inputPrice.current.value,
       id: Math.random(),
     };
-
-    // console.log(candyData);
     props.onAdd(candyData);
+
+    cartCtx.addItem({
+      id: Math.random(),
+      candyName: inputName.current.value,
+      candyDescription: inputDescription.current.value,
+      candyPrice: inputPrice.current.value,
+    });
   };
 
   return (
